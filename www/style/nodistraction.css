@@ -2,6 +2,8 @@
 /* Inspired by the JEKYL blog THEME and the CS50 OPENCOURSEWARE WEBSITE*/
 
 /* WEBSITE STYLING AND COLUMN SPLIT*/
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans');
+
 html,
 body {
   margin: 0;  
@@ -12,7 +14,7 @@ body {
 }
 
 html {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Open Sans",sans-serif;
   font-size: 16px;
   line-height: 1.5;
 }
@@ -24,6 +26,7 @@ html {
 }
 
 body {
+  font-family: "Open Sans",sans-serif;
   margin:0;
   color: #a7a7a7;
   -webkit-text-size-adjust: 100%;
@@ -39,6 +42,17 @@ img {
   object-fit: fill;
 }
 
+.center_content {
+  text-align: center;
+}
+
+.bottom_append {
+  bottom: 10px;
+  right: 10px;
+  position: absolute;
+}
+
+
 .wrapper {
   display:flex;
   position: relative;
@@ -52,22 +66,19 @@ img {
   bottom:0;
   text-align: left;
   padding: 4rem 1rem;
-  color: rgba(255, 255, 255, 0.795);
-  background-color: #202020;
   overflow-y: scroll;
   overflow-x: auto;
   height:100%;
+  background-color: #22252C;
 }
 
 .left_column a {
-  color: #fff;
   padding: 0.5rem;
+
 }
 
 .right_column a {
-  color: rgb(0, 0, 0);
   padding: 0.5rem;
-  
 }
 
 .right_column {
@@ -78,11 +89,11 @@ img {
   margin-left: 20rem;
 }
 
-.right_column a {
+/* .right_column a {
   color: #fff;
-}
+} */
 
-.collapsible_menu{ 
+.collapsible_menu{
   display:none;
 }
 
@@ -90,8 +101,21 @@ img {
     max-width: 100%;
     max-height: 100%;
     object-fit: fill;
-    
+
 }
+
+.img_fit {
+  width: 20rem;
+  height: 13rem;
+  object-fit: fill;
+
+}
+
+.crop_circle_img {
+  object-fit:cover;
+  border-radius:50%;
+}
+
 .reduced_size {
     max-width: 20%;
     max-height: 20%;
@@ -118,7 +142,7 @@ img {
   width:16rem;
 }
 
-.series_width{
+.episode_width{
   width:32rem;
 }
 
@@ -127,16 +151,17 @@ img {
   margin-left: 15px;
   margin-right: 15px;
   margin-bottom: 15px;
-  background-color: #202020;
+  background-color: #22252C;
   border-radius: 10px;
   box-shadow: -0.5rem 0 2rem #030303;
   transition: 0.4s ease-out;
-  position: relative; 
+  position: relative;
   left: 0px;
+  text-align: justify;
 }
 
 .card:hover {
-  transform: translateY(-20px);
+  transform: translateY(-10px);
   transition: 0.4s ease-out;
 }
 
@@ -154,13 +179,13 @@ img {
   border-radius: 10px;
   box-shadow: -0.5rem 0 2rem #030303;
   transition: 0.4s ease-out;
-  position: relative; 
+  position: relative;
   left: 0px;
-  height: 25rem;
+  height: 30rem;
 }
   
 .card_series:hover {
-  transform: translateY(-20px);
+  transform: translateY(-10px);
   transition: 0.4s ease-out;
 }
   
@@ -169,23 +194,21 @@ img {
   left: 50px;
   transition: 0.4s ease-out;
 }
-
-
 .card_subcategories {
   padding:1rem;
   margin: auto;
   margin-bottom: 25px;
-  background-color: #202020;
+  background-color: #22252C;
   border-radius: 10px;
   box-shadow: -0.5rem 0 2rem #030303;
   transition: 0.4s ease-out;
-  position: relative; 
+  position: relative;
   left: 0px;
   height: 17rem;
 }
-  
+
 .card_subcategories:hover {
-  transform: translateY(-20px);
+  transform: translateY(-10px);
   transition: 0.4s ease-out;
 }
 
@@ -198,15 +221,13 @@ img {
 
 /* BUTTON DISPLAY OPTION - CURRENTLY NOT WORKING IN CERTAIN BROWSERS */
 .button {
-  width: 140px;
   height: 45px;
-  font-family: 'Roboto', sans-serif;
   font-size: 11px;
   text-transform: uppercase;
   letter-spacing: 2.5px;
   font-weight: 500;
-  color: #fff;
-  background-color: #c28e00;
+  color: rgb(0, 0, 0);
+  background-color: #555555;
   border: none;
   border-radius: 45px;
   box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
@@ -219,7 +240,7 @@ img {
   background-color: #384485;
   box-shadow: 0px 15px 20px rgba(24, 20, 87, 0.4);
   color: #fff;
-  transform: translateY(-7px);
+  transform: translateY(-3px);
 }
 
 /* MOBILE DISPLAY SETTINGS */
@@ -255,36 +276,9 @@ img {
   .nav_pc{
       display:none;
     }
-
-
 }
 
-.collapsible_menu{ 
-  display: block;
-  width: auto;
-  height: 20px; 
-  font-family: 'Roboto', sans-serif;
-  font-size: 11px;
-  text-transform: uppercase;
-  letter-spacing: 2.5px;
-  font-weight: 500;
-  color: #fff;
-  background-color: #373844;
-  border: none;
-  border-radius: 45px;
-  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
-  transition: all 0.3s ease 0s;
-  cursor: pointer;
-  outline: none;
-  }
 
-.active, .collapsible_menu:hover {
-  background-color: rgb(89, 88, 133);
-}
-
-.common_nav {
-  display:none;
-}
 
 /*JEKYLL THEME */
 /* No `:visited` state is required by default (browsers will use `a`) */
@@ -297,11 +291,11 @@ img {
 }
 
 a {
-  color: #ccd0d3;
   text-decoration: none;
+  color: #FFFFFF;
 }
 a strong {
-  color: inherit;
+  color: #FFFFFF;
 }
 /* `:focus` is linked to `:hover` for basic accessibility */
 a:hover,
@@ -309,32 +303,47 @@ a:focus {
   text-decoration: underline;
 }
 
+a.text-logo, a.text-logo:hover, a.text-logo:visited {
+  text-decoration: none;
+  font-size: 1.6rem;
+  line-height: 100%;
+  font-weight: 600;
+}
+
 /* Headings */
 h1, h2, h3, h4, h5, h6 {
-  margin-bottom: .5rem;
-  font-weight: bold;
+  text-decoration: none;
+  font-size: 1.6rem;
+  line-height: 100%;
+  font-weight: 600;
   line-height: 1.25;
-  color: #000000;
+  color: #22252C;
   text-rendering: optimizeLegibility;
 }
+
 h1 {
   font-size: 2rem;
-  color:#000000;
 }
+
 h2 {
   margin-top: auto;
   font-size: 1.5rem;
-  color:#000000;
+  color:#fff;
 }
 
 h3 {
-  margin-top: 1.5rem;
+  margin-top: 0;
   font-size: 1.25rem;
-  color:#a4bbe6;
+  margin-bottom: 0;
 }
-h4, h5, h6 {
+
+h5 {
+  font-size: 1.25rem;
+}
+
+h4, h6 {
   font-size: 1rem;
-  color:#a4bbe6;
+  color: #FFFFFF;
 }
 
 /* Body text */
@@ -347,13 +356,13 @@ p {
 .lead {
   font-size: 1.25rem;
   font-weight: 300;
-  
+  text-align: justify;
 }
 
 
 .descriptive {
   font-size: 1rem;
-  color:#a4bbe6;
+  color:#c0d0ee;
 }
 
 /* Lists */

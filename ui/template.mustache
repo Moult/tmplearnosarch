@@ -4,49 +4,53 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
-    <title>OpenEducation</title>
+    <title>learn.OSArch</title>
     <link rel="stylesheet" href="{{baseurl}}style/nodistraction.css">
+    <link rel="shortcut icon" href="{{baseurl}}/assets/img/Favicon.ico"/>
 </head>
 <body>
     <div class="wrapper">
         <div class="left_column">
             <div class="sidebar-about">
-                <h1><a href="/index.php">OSEducation</a></h1>
-                <h2><a>AEC Edition</a></h2>
-                <p class="lead">A platform designed to help you develop digital skills. At your own pace.</p>
+                <div class="center_content">
+                    <img class= "crop_circle_img" height="100rem" src="https://wiki.osarch.org/images/7/72/Favicon-red-curve-transparent-bg-multires.ico" alt="OSARCH">
+                    <br>
+                    <h2><a class="text-logo"href="{{baseurl}}">OSArch Learning</a></h2>
+                    <h4>Find video tutorials on free/libre software and openBIM workflows.</h4>
+                </div>
             </div>
-            <!-- IF THE SESSION OCCURS IN mobile screens, THE DIVIDER NAV_PC WILL HIDE // check CSS code for reference-->
-            <!-- href links need to be modified depending on the folder name //server used-->
-            <nav class="nav_pc" >
-                <hr>
-                <a href="{{baseurl}}">Homepage</a><br>    
-                <a href="{{baseurl}}paths">Learning Paths</a><br>
-                <a href="{{baseurl}}about">About</a><br>
-                <hr>
-            </nav>
-            <!-- DISPLAY NAVIGATION BUTTON FOR MOBILE* -->
-            <!--button class="button_mobile">Menu</button-->
+            <hr>
+            <button class=button><a href="https://wiki.osarch.org/index.php?title=AEC_Free_Software_directory" target="_blank"> Wiki.OSArch </a></button>
+            <hr>
+            <button class=button><a href="{{baseurl}}"> Main Menu </a></button>
+            <hr>
             <nav class="nav_pc">
-                {{#categories}}
-                <a class="lead">{{name}}</a><br />
-                {{#is_active_category}}
-                <ul>
-                    {{#subcategories}}
-                    <li><a href="#">{{name}}</a></li>
-                    {{/subcategories}}
-                </ul>
-                {{/is_active_category}}
-                {{/categories}}
+            </nav>
+            <nav class="nav_pc">
+                <ol>
+                    {{#categories}}
+                    <li><a class="lead" href="{{baseurl}}categories/{{id}}">{{name}}</a></li>
+                    {{#is_active_category}}
+                    <ul>
+                        {{#subcategories}}
+                        <li><a href="{{baseurl}}subcategories/{{id}}">{{name}}</a></li>
+                        {{/subcategories}}
+                    </ul>
+                    {{/is_active_category}}
+                    <br>
+                    {{/categories}}
+                </ol>
                 <hr>
-                <br>    
-                <span>Currently Alpha Version</span>
-                <p>&copy; 2020. Open education.</p>
-                <p><a href="https://theboson.app">Boson Apps</a><br>
-                <a href="mailto:contact@theboson.app">contact@theboson.app</a><br>
+                <a href="https://wiki.osarch.org/index.php?title=AEC_Free_Software_directory" target="_blank"><p>WIKI.OSArch AEC Free Software Directory</p></a>
                 <hr>
+                <br>
                 <br>
             </nav>
         </div>
+        <br>
+        <hr>
+        <br>
+        <hr>
         <div class="right_column">
             {{{content}}}
         </div>
